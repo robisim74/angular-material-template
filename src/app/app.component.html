@@ -1,0 +1,38 @@
+<md-sidenav-container class="app-root" fullscreen>
+
+    <md-sidenav #start mode="over" class="mat-elevation-z6">
+        <md-nav-list>
+            <a *ngFor="let navItem of navItems" md-list-item routerLinkActive="active-link" (click)="start.close()" [routerLink]="[navItem.route]">
+                {{navItem.name}}
+            </a>
+        </md-nav-list>
+    </md-sidenav>
+
+    <div>
+        <md-toolbar color="primary" class="mat-elevation-z2">
+            <button md-icon-button (click)="start.open()">
+                <md-icon class="md-24">menu</md-icon>
+            </button>
+            <div class="app-toolbar">
+                <h1>{{title.getTitle()}}</h1>
+
+                <div class="menu-section">
+                    <button md-icon-button [mdMenuTriggerFor]="posXMenu" aria-label="Open x-positioned menu">
+                        <md-icon>more_vert</md-icon>
+                    </button>
+
+                    <md-menu xPosition="before" #posXMenu="mdMenu" class="before">
+                        <a href="https://github.com/robisim74/angular-material-template" md-menu-item>
+                            <md-icon>code</md-icon>Source code
+                        </a>
+                    </md-menu>
+                </div>
+            </div>
+        </md-toolbar>
+
+        <div class="app-content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+</md-sidenav-container>
