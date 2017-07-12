@@ -1,7 +1,7 @@
 {
     "name": "angular-material-template",
     "version": "0.0.1",
-    "description": "Angular Material Template",
+    "description": "Material design template for Angular apps",
     "license": "MIT",
     "scripts": {
         "ng": "ng",

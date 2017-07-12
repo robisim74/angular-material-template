@@ -1,6 +1,6 @@
 <md-sidenav-container class="app-root" fullscreen>
 
-    <md-sidenav #start mode="over" class="mat-elevation-z6">
+    <md-sidenav #start mode="over">
         <md-nav-list>
             <a *ngFor="let navItem of navItems" md-list-item routerLinkActive="active-link" (click)="start.close()" [routerLink]="[navItem.route]">
                 {{navItem.name}}
@@ -9,9 +9,9 @@
     </md-sidenav>
 
     <div>
-        <md-toolbar color="primary" class="mat-elevation-z2">
+        <md-toolbar color="primary" class="mat-elevation-z6">
             <button md-icon-button (click)="start.open()">
-                <md-icon class="md-24">menu</md-icon>
+                <md-icon>menu</md-icon>
             </button>
             <div class="app-toolbar">
                 <h1>{{title.getTitle()}}</h1>
