@@ -3,7 +3,7 @@
     <md-sidenav #start mode="over">
         <md-nav-list>
             <a *ngFor="let navItem of navItems" md-list-item routerLinkActive="active-link" (click)="start.close()" [routerLink]="[navItem.route]">
-                {{navItem.name}}
+                {{ navItem.name }}
             </a>
         </md-nav-list>
     </md-sidenav>
@@ -14,7 +14,7 @@
                 <md-icon>menu</md-icon>
             </button>
             <div class="app-toolbar">
-                <h1>{{title.getTitle()}}</h1>
+                <h1>{{ title.getTitle() }}</h1>
 
                 <div class="menu-section">
                     <button md-icon-button [mdMenuTriggerFor]="posXMenu" aria-label="Open x-positioned menu">
