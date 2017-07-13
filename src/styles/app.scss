@@ -62,6 +62,10 @@
     h1 {
         font-size: 20px;
     }
+
+    .fill-remaining-space {
+        flex: 1 1 auto;
+    }
 }
 
 // Stretch to screen size in fullscreen mode.

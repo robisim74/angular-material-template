@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class AppComponent implements OnInit {
 
-    navItems = [
+    navItems: any[] = [
         { name: 'Home', route: 'home' },
         { name: 'Page', route: 'page' }
     ];
